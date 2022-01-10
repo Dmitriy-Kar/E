@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".massCalculation">
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="190dp"
+      android:orientation="horizontal">
+
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/circle1"
+        android:id="@+id/imageProfile"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"/>
+
+
+  </LinearLayout>
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="202dp"
+        android:layout_height="match_parent">
+
+      <TextView
+          android:textSize="15sp"
+          android:text="Выберите профиль"
+          android:id="@+id/partProfileText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="30dp"/>
+
+      <Spinner
+          android:text="Выберите профиль"
+          android:id="@+id/spinnerPartProfile"
+          android:layout_width="match_parent"
+          android:layout_below="@id/partProfileText"
+          android:layout_height="30dp"
+          android:layout_marginTop="5dp" />
+
+
+      <TextView
+          android:layout_below="@id/spinnerPartProfile"
+          android:textSize="15sp"
+          android:text="Выберите материал"
+          android:id="@+id/partMaterialText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"/>
+
+      <Spinner
+          android:text="Выберите материал"
+          android:id="@+id/spinnerPartMaterial"
+          android:layout_width="match_parent"
+          android:layout_height="30dp"
+          android:layout_below="@id/partMaterialText"
+          android:layout_marginTop="5dp" />
+
+      <TextView
+          android:layout_below="@id/spinnerPartMaterial"
+          android:textSize="20sp"
+          android:text="Введите размеры:"
+          android:id="@+id/enterDimensions"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="25dp"/>
+
+      <TextView
+          android:id="@+id/L"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/enterDimensions"
+          android:layout_marginTop="20dp"
+          android:text="L, мм"
+          android:textSize="20sp" />
+
+      <EditText
+          android:inputType="numberDecimal"
+          android:background="@android:color/holo_green_dark"
+          android:layout_below="@id/enterDimensions"
+          android:textSize="20sp"
+          android:hint="         "
+          android:id="@+id/valueL"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:layout_toRightOf="@id/L"
+          android:layout_marginLeft="4dp"/>
+
+
+
+      <TextView
+          android:layout_below="@id/L"
+          android:textSize="20sp"
+          android:text="h, мм"
+          android:id="@+id/h"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"/>
+
+      <EditText
+          android:inputType="numberDecimal"
+          android:background="@android:color/holo_green_dark"
+          android:layout_below="@id/valueL"
+          android:textSize="20sp"
+          android:hint="         "
+          android:id="@+id/valueh"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:layout_toRightOf="@id/h"
+          android:layout_marginLeft="4dp"/>
+
+
+      <TextView
+          android:layout_below="@id/h"
+          android:textSize="20sp"
+          android:text="b, мм"
+          android:id="@+id/b"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"/>
+
+      <EditText
+          android:inputType="numberDecimal"
+          android:background="@android:color/holo_green_dark"
+          android:layout_below="@id/valueh"
+          android:textSize="20sp"
+          android:hint="         "
+          android:id="@+id/valueb"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:layout_toRightOf="@id/b"
+          android:layout_marginLeft="4dp"/>
+
+
+      <TextView
+          android:layout_below="@id/b"
+          android:textSize="20sp"
+          android:text="s, мм"
+          android:id="@+id/s"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"/>
+
+      <EditText
+          android:inputType="numberDecimal"
+          android:background="@android:color/holo_green_dark"
+          android:layout_below="@id/valueb"
+          android:textSize="20sp"
+          android:hint="         "
+          android:id="@+id/values"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:layout_toRightOf="@id/s"
+          android:layout_marginLeft="4dp"/>
+
+      <TextView
+          android:layout_below="@id/s"
+          android:textSize="20sp"
+          android:text="d, мм"
+          android:id="@+id/d"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"/>
+
+
+      <EditText
+          android:inputType="numberDecimal"
+          android:background="@android:color/holo_green_dark"
+          android:layout_below="@id/values"
+          android:textSize="20sp"
+          android:hint="         "
+          android:id="@+id/valued"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:layout_toRightOf="@id/d"
+          android:layout_marginLeft="4dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+      <Button
+          android:onClick="calculateMass"
+          android:background="@android:color/holo_blue_light"
+          android:id="@+id/calculateMass"
+          android:layout_width="160dp"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="30dp"
+          android:text="Рассчитать"
+          android:textSize="18sp" />
+
+
+      <TextView
+          android:id="@+id/m"
+          android:layout_marginLeft="20dp"
+          android:layout_below="@id/calculateMass"
+          android:layout_marginTop="60dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="m, кг="
+          android:textSize="20sp" />
+
+      <TextView
+          android:layout_toRightOf="@id/m"
+          android:layout_marginLeft="4dp"
+          android:id="@+id/valuem"
+          android:background="@android:color/holo_blue_light"
+          android:layout_below="@id/calculateMass"
+          android:layout_marginTop="60dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:hint="     "
+          android:textSize="24sp" />
+
+
+    </RelativeLayout>
+
+  </LinearLayout>
+  
+
+</LinearLayout>
+

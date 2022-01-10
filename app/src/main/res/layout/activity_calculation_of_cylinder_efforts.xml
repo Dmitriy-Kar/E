@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".calculationOfCylinderEfforts">
+
+
+    <ImageView
+        android:id="@+id/imageAuger"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hc"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="202dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/hydraulicСylinderParameters"
+                android:background="@android:color/holo_green_dark"
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="       Введите \n    параметры \n     цилиндра"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/D"
+                android:layout_marginLeft="25dp"
+                android:layout_below="@id/hydraulicСylinderParameters"
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="D, мм="
+                android:textSize="20sp" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_toRightOf="@id/D"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/value_Dhc"
+                android:background="@android:color/holo_green_dark"
+                android:layout_below="@id/hydraulicСylinderParameters"
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="         "
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/d"
+                android:layout_marginLeft="25dp"
+                android:layout_below="@id/D"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="d, мм="
+                android:textSize="20sp" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_toRightOf="@id/D"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/value_dhc"
+                android:background="@android:color/holo_green_dark"
+                android:layout_below="@id/D"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="         "
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/P"
+                android:layout_marginLeft="25dp"
+                android:layout_below="@id/d"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P, bar="
+                android:textSize="20sp" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_toRightOf="@id/P"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/value_Phc"
+                android:background="@android:color/holo_green_dark"
+                android:layout_below="@id/d"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="         "
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <Button
+                android:onClick="calculationForceCylinder"
+                android:background="@android:color/holo_blue_light"
+                android:id="@+id/calculateButton"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="38dp"
+                android:text="Рассчитать усилия"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/F1"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/calculateButton"
+                android:layout_marginTop="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="F1, кН="
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_toRightOf="@id/F1"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/value_F1"
+                android:background="@android:color/holo_blue_light"
+                android:layout_below="@id/calculateButton"
+                android:layout_marginTop="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/F2"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/F1"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="F2, кН="
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_toRightOf="@id/F2"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/value_F2"
+                android:background="@android:color/holo_blue_light"
+                android:layout_below="@id/F1"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/F1ton"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/F2"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="F1, т="
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_toRightOf="@id/F1ton"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/value_F1_ton"
+                android:background="@android:color/holo_blue_light"
+                android:layout_below="@id/F2"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/F2ton"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/F1ton"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="F2, т="
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_toRightOf="@id/F2ton"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/value_F2_ton"
+                android:background="@android:color/holo_blue_light"
+                android:layout_below="@id/F1ton"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:textSize="20sp" />
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

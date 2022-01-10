@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".calculateThermalGap">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="horizontal">
+
+
+    <ImageView
+        android:id="@+id/imageAuger"
+        android:scaleType="centerCrop"
+        android:src="@drawable/thermalexpansion1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+        </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="202dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/parameters"
+                android:background="@android:color/holo_green_dark"
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="   Введите \n параметры"
+                android:textSize="24sp" />
+
+            <Spinner
+                android:id="@+id/spinnerMetal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/parameters"
+                android:layout_marginTop="15dp"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:id="@+id/thermalExpansion"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/spinnerMetal"
+                android:layout_marginTop="15dp"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="Коэф. тепл.\nрасширения"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_toRightOf="@id/thermalExpansion"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/value_thermalExpansion"
+                android:background="@android:color/holo_green_dark"
+                android:layout_below="@id/spinnerMetal"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="         "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/t1"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/thermalExpansion"
+                android:layout_marginTop="15dp"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="Начальная температура,\nград C"
+                android:textSize="18sp" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_toRightOf="@id/t1"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/value_t1"
+                android:background="@android:color/holo_green_dark"
+                android:layout_below="@id/thermalExpansion"
+                android:layout_marginTop="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="         "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/t2"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/t1"
+                android:layout_marginTop="15dp"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="Температура нагрева,\nград С"
+                android:textSize="18sp" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_toRightOf="@id/t1"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/value_t2"
+                android:background="@android:color/holo_green_dark"
+                android:layout_below="@id/t1"
+                android:layout_marginTop="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="         "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/L"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/t2"
+                android:layout_marginTop="15dp"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="Длина \nдетали L, мм"
+                android:textSize="18sp" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_toRightOf="@id/L"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/value_L"
+                android:background="@android:color/holo_green_dark"
+                android:layout_below="@id/t2"
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="         "
+                android:textSize="18sp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <Button
+                android:onClick="calculateThermalGap"
+                android:background="@android:color/holo_blue_light"
+                android:id="@+id/calculateExpansion"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="Рассчитать"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/L1"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@id/calculateExpansion"
+                android:layout_marginTop="60dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="L1, мм="
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_toRightOf="@id/L1"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/value_L1"
+                android:background="@android:color/holo_blue_light"
+                android:layout_below="@id/calculateExpansion"
+                android:layout_marginTop="60dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="     "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/L2"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@id/L1"
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="L2, мм="
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_toRightOf="@id/L2"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/value_L2"
+                android:background="@android:color/holo_blue_light"
+                android:layout_below="@id/L1"
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="     "
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

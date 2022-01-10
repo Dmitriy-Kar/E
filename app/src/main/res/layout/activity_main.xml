@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Язык"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="40dp"
+        android:onClick="calculationOfAuger"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimaryDark"
+        android:text="Расчёт витков шнека"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:onClick="calculateThermalGap"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimaryDark"
+        android:text="Расчёт теплового зазора"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:onClick="calculationOfCylinderEfforts"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimaryDark"
+        android:text="Расчёт усилий гидроцилиндра"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:onClick="pressFitCalculation"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimaryDark"
+        android:text="Расчёт прессовой посадки"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:onClick="massCalculation"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimaryDark"
+        android:text="Расчёт массы"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:onClick="weldingCalculation"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimaryDark"
+        android:text="Расчёт сварных швов"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:onClick="threadCalculation"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimaryDark"
+        android:text="Расчёт резьбы"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:onClick="threadCalculation"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimaryDark"
+        android:text="Гост"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

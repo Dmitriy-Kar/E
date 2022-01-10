@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".calculationOfAuger">
+
+    <ImageView
+        android:id="@+id/imageAuger"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/vitokk" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="202dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Auger"
+                android:background="@android:color/holo_green_dark"
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="    Введите \n   размеры \n      витка"
+                android:textSize="24sp" />
+
+
+            <TextView
+                android:id="@+id/d"
+                android:layout_marginLeft="25dp"
+                android:layout_below="@id/Auger"
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="d, мм="
+                android:textSize="24sp" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_toRightOf="@id/d"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/value_d"
+                android:background="@android:color/holo_green_dark"
+                android:layout_below="@id/Auger"
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="         "
+                android:textSize="24sp" />
+
+
+            <TextView
+                android:id="@+id/D"
+                android:layout_marginLeft="25dp"
+                android:layout_below="@id/d"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="D, мм="
+                android:textSize="24sp" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_toRightOf="@id/D"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/value_D"
+                android:background="@android:color/holo_green_dark"
+                android:layout_below="@id/d"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="         "
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/S"
+                android:layout_marginLeft="25dp"
+                android:layout_below="@id/D"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S, мм="
+                android:textSize="24sp" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_toRightOf="@id/S"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/value_S"
+                android:background="@android:color/holo_green_dark"
+                android:layout_below="@id/D"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="         "
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/h"
+                android:layout_marginLeft="25dp"
+                android:layout_below="@id/S"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="h, мм="
+                android:textSize="24sp" />
+
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_toRightOf="@id/h"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/value_h"
+                android:background="@android:color/holo_green_dark"
+                android:layout_below="@id/S"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="         "
+                android:textSize="24sp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <Button
+                android:onClick="workpieceCalculation"
+                android:background="@android:color/holo_blue_light"
+                android:id="@+id/calculateButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="37dp"
+                android:text="Рассчитать размеры заготовки"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/d1"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/calculateButton"
+                android:layout_marginTop="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="d1, мм="
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_toRightOf="@id/d1"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/value_d1"
+                android:background="@android:color/holo_blue_light"
+                android:layout_below="@id/calculateButton"
+                android:layout_marginTop="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/D1"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/d1"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="D1, мм="
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_toRightOf="@id/D1"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/value_D1"
+                android:background="@android:color/holo_blue_light"
+                android:layout_below="@id/d1"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/A"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/D1"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A, град="
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_toRightOf="@id/A"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/value_A"
+                android:background="@android:color/holo_blue_light"
+                android:layout_below="@id/D1"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/m"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/A"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="m, кг="
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_toRightOf="@id/m"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/value_m"
+                android:background="@android:color/holo_blue_light"
+                android:layout_below="@id/A"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
